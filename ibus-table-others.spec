@@ -1,5 +1,5 @@
 %define	version 1.3.0.20100528
-%define	release %mkrel 1
+%define	release %mkrel 2
 
 Name:      ibus-table-others
 Summary:   ibus-table-others - table-based engine

@@ -1,5 +1,5 @@
 %define	version 1.3.0.20100528
-%define	release %mkrel 3
+%define	release %mkrel 4
 
 Name:      ibus-table-others
 Summary:   ibus-table-others - table-based engine
@@ -11,6 +11,7 @@ URL:       http://code.google.com/p/ibus/
 Source0:   http://ibus.googlecode.com/files/%{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: ibus-table-devel >= 1.3.0
+BuildRequires: ibus-devel >= 1.3.9-5
 Requires:  ibus-table >= 1.3.0
 BuildArch:	noarch
 
@@ -47,10 +48,17 @@ Summary:   Thai language support via ibus-table
 Group:     System/Internationalization
 Requires:  ibus-table >= 1.3.0
 Requires:  locales-th
+Requires(post,preun): GConf2
 Obsoletes: ibus-table-thai
 
 %description -n ibus-table-th
 ibus-table-th provides Thai input method on IBus Table under IBus framework.
+
+%post -n ibus-table-th
+%post_ibus_register_engine thai th
+
+%preun -n ibus-table-th
+%preun_ibus_unregister_engine thai
 
 %files -n ibus-table-th
 %defattr(-,root,root)
@@ -61,10 +69,17 @@ ibus-table-th provides Thai input method on IBus Table under IBus framework.
 Summary:   Vietnamese language support via ibus-table
 Group:     System/Internationalization
 Requires:  ibus-table >= 1.3.0
+Requires(post,preun): GConf2
 Requires:  locales-vi
 
 %description -n ibus-table-vi
 ibus-table-vi provides Vietnamese input method on IBus Table under IBus framework.
+
+%post -n ibus-table-vi
+%post_ibus_register_engine viqr vi
+
+%preun -n ibus-table-vi
+%preun_ibus_unregister_engine viqr
 
 %files -n ibus-table-vi
 %defattr(-,root,root)
@@ -75,9 +90,18 @@ ibus-table-vi provides Vietnamese input method on IBus Table under IBus framewor
 Group: System/Internationalization
 Summary: ibus-translit - table-based engine
 Requires: ibus-table >= 1.3.0
+Requires(post,preun): GConf2
 
 %description -n ibus-table-translit
 ibus-table-translit provides Translit input method on IBus Table under IBus framework.
+
+%post -n ibus-table-translit
+%post_ibus_register_engine translit ru
+%post_ibus_register_engine translit-ua uk
+
+%preun -n ibus-table-translit
+%preun_ibus_unregister_engine translit
+%preun_ibus_unregister_engine translit-ua
 
 %files -n ibus-table-translit
 %defattr(-,root,root)

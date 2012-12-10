@@ -1,5 +1,5 @@
 %define	version 1.3.0.20100528
-%define	release %mkrel 5
+%define	release %mkrel 7
 
 Name:      ibus-table-others
 Summary:   ibus-table-others - table-based engine
@@ -118,8 +118,29 @@ ibus-table-translit provides Translit input method on IBus Table under IBus fram
 %make
 
 %install
-rm -rf %{buildroot}
+rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
 
 %clean
-rm -rf %{buildroot}
+rm -rf $RPM_BUILD_ROOT
+
+
+%changelog
+* Fri May 06 2011 Funda Wang <fwang@mandriva.org> 1.3.0.20100528-5mdv2011.0
++ Revision: 669834
+- rebuild
+
+* Tue Apr 26 2011 Funda Wang <fwang@mandriva.org> 1.3.0.20100528-4
++ Revision: 659318
+- rebuild for new ibus
+
+* Wed Jul 28 2010 Funda Wang <fwang@mandriva.org> 1.3.0.20100528-3mdv2011.0
++ Revision: 562173
+- rebuild
+- rebuild for missing packages
+
+* Sat Jul 24 2010 Funda Wang <fwang@mandriva.org> 1.3.0.20100528-1mdv2011.0
++ Revision: 558231
+- import ibus-table-others
+
+

@@ -1,5 +1,5 @@
 %define	version 1.3.0.20100528
-%define	release %mkrel 7
+%define	release 8
 
 Name:      ibus-table-others
 Summary:   ibus-table-others - table-based engine
@@ -16,7 +16,8 @@ Requires:  ibus-table >= 1.3.0
 BuildArch:	noarch
 
 %description
-ibus-table-others provides the following input methods on IBus-Table on IBus framework:
+ibus-table-others provides the following input methods on IBus-Table on IBus
+framework:
 
     * CNS11643
     * Compose

@@ -1,7 +1,7 @@
 Summary:	ibus-table-others - table-based engine
 Name:		ibus-table-others
 Version:	1.3.0.20100528
-Release:	8
+Release:	9
 License:	GPLv2+
 Group:		System/Internationalization
 Url:		http://code.google.com/p/ibus/

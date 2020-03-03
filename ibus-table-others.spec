@@ -48,8 +48,8 @@ Requires(post,preun): GConf2
 ibus-table-compose provides compose input method on IBus Table under IBus framework.
 
 %files -n ibus-table-compose
-%{_datadir}/ibus-table/icons/compose.svg
-%{_datadir}/ibus-table/tables/compose.db
+#%{_datadir}/ibus-table/icons/compose.svg
+#%{_datadir}/ibus-table/tables/compose.db
 
 %package -n ibus-table-latex
 Group: System/Internationalization

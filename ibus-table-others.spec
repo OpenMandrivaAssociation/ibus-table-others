@@ -76,8 +76,8 @@ Requires(post,preun):	GConf2
 Translit input method on IBus Table under IBus framework.
 
 %files -n ibus-table-translit
-%{_datadir}/ibus-table/icons/translit-ua.png
-%{_datadir}/ibus-table/icons/translit.png
+#%{_datadir}/ibus-table/icons/translit-ua.png
+#%{_datadir}/ibus-table/icons/translit.png
 %{_datadir}/ibus-table/tables/translit-ua.db
 %{_datadir}/ibus-table/tables/translit.db
 

@@ -1,11 +1,11 @@
 Summary:	ibus-table-others - table-based engine
 Name:		ibus-table-others
-Version:	1.3.0.20100528
-Release:	9
+Version:	1.3.11
+Release:	1
 License:	GPLv2+
 Group:		System/Internationalization
-Url:		http://code.google.com/p/ibus/
-Source0:	http://ibus.googlecode.com/files/%{name}-%{version}.tar.gz
+URL:       https://github.com/moebiuscurve/ibus-table-others
+Source0:   https://github.com/moebiuscurve/ibus-table-others/releases/download/%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	pkgconfig(ibus-1.0)
 BuildRequires:	pkgconfig(ibus-table)
 Requires:	ibus-table
@@ -87,9 +87,9 @@ Translit input method on IBus Table under IBus framework.
 %setup -q
 
 %build
-%configure2_5x --disable-compose --disable-latex
-%make
+%configure --disable-compose --disable-latex
+%make_build
 
 %install
-%makeinstall_std
+%make-install
 

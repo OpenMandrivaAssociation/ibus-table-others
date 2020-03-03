@@ -23,7 +23,7 @@ Provides the following input methods on IBus-Table on IBus framework:
 %files
 %{_datadir}/ibus-table/icons/cns11643.png
 %{_datadir}/ibus-table/icons/ibus-emoji.svg
-%{_datadir}/ibus-table/icons/ipa-x-sampa.png
+#%{_datadir}/ibus-table/icons/ipa-x-sampa.png
 %{_datadir}/ibus-table/icons/rustrad.png
 %{_datadir}/ibus-table/icons/yawerty.png
 %{_datadir}/ibus-table/tables/cns11643.db

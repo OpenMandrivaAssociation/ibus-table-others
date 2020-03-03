@@ -91,5 +91,5 @@ Translit input method on IBus Table under IBus framework.
 %make_build
 
 %install
-%make-install
+%make_install
 

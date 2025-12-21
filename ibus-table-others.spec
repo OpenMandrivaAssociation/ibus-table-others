@@ -6,6 +6,11 @@ License:	GPLv2+
 Group:		System/Internationalization
 URL:       https://github.com/moebiuscurve/ibus-table-others
 Source0:   https://github.com/moebiuscurve/ibus-table-others/releases/download/%{version}/%{name}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(ibus-1.0)
 BuildRequires:	pkgconfig(ibus-table)
 Requires:	ibus-table
